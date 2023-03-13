@@ -1,0 +1,38 @@
+package org.example.Cw3.ex1;
+
+import org.example.Cw3.ex1.model.Items;
+
+import java.sql.SQLOutput;
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Scanner;
+
+public class ex1 {
+    public static void main(String[] args) {
+        Items items = new Items("qwe", "zxc", 3.0);
+        Items items1 = new Items("qwe1", "asd", 3.0);
+        Items items2 = new Items("qwe2", "ert", 3.0);
+        Items items3 = new Items("qwe", "dfg", 3.0);
+
+        List<Items> itemsList = new ArrayList<>();
+        itemsList.add(items);
+        itemsList.add(items1);
+        itemsList.add(items2);
+        itemsList.add(items3);
+
+        Scanner scanner = new Scanner(System.in);
+        String searchName = scanner.nextLine();
+        int sumVolume = 0;
+        List<String> country = new ArrayList<>();
+
+        for (int i = 0; i < itemsList.size(); i++) {
+            if (itemsList.get(i).getName().equals(searchName)) {
+                sumVolume += itemsList.get(i).getVolume();
+                country.add(itemsList.get(i).getCountry());
+
+
+            }
+        }
+    }
+}
