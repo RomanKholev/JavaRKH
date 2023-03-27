@@ -42,7 +42,9 @@ public class Ex1 {
         base.add(new Notebook("Lenova", 16, 256, "linux", "black"));
         base.add(new Notebook("Lenova", 32, 512, "linux", "gray"));
         base.add(new Notebook("Lenova", 64, 1024, "linux", "white"));
-
+        base.add(new Notebook("HP", 16, 256, "linux", "black"));
+        base.add(new Notebook("HP", 32, 512, "linux", "gray"));
+        base.add(new Notebook("HP", 64, 1024, "linux", "white"));
 
 
         UserFilter filter = new UserFilter(base);
